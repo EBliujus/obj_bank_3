@@ -1,0 +1,17 @@
+{
+    "name": "37067/customers",
+    "description": "Customers DataBase",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "EBliujus",
+            "email": "ev.bliujus@gmail.com"
+        }
+    ],
+    "require": {}
+}
