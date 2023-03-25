@@ -10,4 +10,13 @@
     <title> <?= $title ?? 'Untitled' ?> </title>
 </head>
 <body>
-    
+<nav>
+    <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a class="active" href="#">About</a></li>
+        <li><a class="active" href="#">Services</a></li>
+        <li><a class="active" href="#">Contact</a></li>
+        <li><a class="active" href="#">Feedback</a></li>
+        <button>Login</button>
+    </ul>
+</nav>
