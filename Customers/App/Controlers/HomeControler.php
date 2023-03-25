@@ -9,6 +9,8 @@ class HomeControler {
     public function home()
     {
         
-        return App::view('home/index');
+        return App::view('home/index', [
+            'title' => 'Home'
+        ]);
     }
 }
