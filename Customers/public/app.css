@@ -10861,3 +10861,32 @@ nav ul button:hover {
   background-color: #2D3F56;
   box-shadow: 0 0 10px #65BF92, 0 0 30px #65BF92, 0 0 50px #65BF92;
 }
+
+.card-header {
+  background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+
+.card-body {
+  background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+
+.list-group-item {
+  background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+
+.client-line {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-line .client-info {
+  display: flex;
+  justify-content: space-around;
+}
+.client-line .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  color: #2D3F56;
+}

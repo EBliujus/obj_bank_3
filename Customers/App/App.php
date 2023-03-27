@@ -2,6 +2,7 @@
 namespace App;
 
 use App\Controlers\HomeControler;
+use App\Controlers\ClientControler;
 
 class App {
 
@@ -22,6 +23,31 @@ class App {
         {
             return (new HomeControler)->home();
         } 
+
+        if ($method == 'GET' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') 
+        {
+            return (new ClientControler)->create();
+        }
+
+        if ($method == 'POST' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') 
+        {
+            return (new ClientControler)->store();
+        }
+
+        if ($method == 'GET' && count($url) == 1 && $url[0] === 'clients') 
+        {
+            return (new ClientControler)->index();
+        }
+
+        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'show') 
+        {
+            return (new ClientControler)->show($url[2]);
+        }
+
+        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'edit') 
+        {
+            return (new ClientControler)->edit($url[2]);
+        }
         
         else {
             return '<h1>404 Page Not Found</h1>';
@@ -32,7 +58,7 @@ class App {
         public static function view($tmp, $data = []) 
         {
             $path = __DIR__ . '/../views/';
-            // extract istraukia psl title, yrasome funkcijoj DATA it HC prirasom funcijoj ['koreikia'=>'Koreikia']
+            // extract istraukia psl title, yrasome funkcijoj DATA ir HC prirasom funcijoj ['koreikia'=>'Koreikia']
             extract($data);
             // buferis su ob_start ir kitom funcijom ob_
             ob_start();
@@ -42,5 +68,13 @@ class App {
             $html = ob_get_contents();
             ob_end_clean();
             return $html;
+        }
+
+        public static function redirect($url) 
+        { 
+            header('Location:' . URL . $url);
+            return '';
+            // die;
+            // (return '' ;) taip pat galima ir return tuscia stinga rasyti vietoj DIE!
         }
 }

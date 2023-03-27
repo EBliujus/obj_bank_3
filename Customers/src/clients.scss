@@ -1,0 +1,25 @@
+.card-header {
+    background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+.card-body{
+    background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+.list-group-item {
+    background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+.client-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .client-info {
+        display: flex;
+        justify-content: space-around;
+    }
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        color: #2D3F56;
+    }
+}

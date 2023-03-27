@@ -10,15 +10,5 @@
     <!-- titlus galima suprogramutoi kad keistusi automatiskai -->
     <title> <?= $title ?? 'Untitled' ?> </title>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a class="active" href="#">About</a></li>
-            <li><a class="active" href="#">Services</a></li>
-            <li><a class="active" href="#">Contact</a></li>
-            <li><a class="active" href="#">Feedback</a></li>
-            <button>Login</button>
-        </ul>
-    </nav>
+    <?php require __DIR__ . '/header.php' ?>
