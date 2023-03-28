@@ -49,6 +49,11 @@ class App {
             return (new ClientControler)->edit($url[2]);
         }
         
+        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'delete') 
+        {
+            return (new ClientControler)->delete($url[2]);
+        }
+        
         else {
             return '<h1>404 Page Not Found</h1>';
         }

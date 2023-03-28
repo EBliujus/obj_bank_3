@@ -17,6 +17,9 @@
                                 <div class="buttons">
                                 <a href="<?= URL ?>clients/show/<?= $client['id'] ?>" class="btn btn-info">Show</a>
                                 <a href="<?= URL ?>clients/edit/<?= $client['id'] ?>" class="btn btn-success">Edit</a>
+                                <form action="<?= URL ?>clients/delete/<?= $client['id'] ?>" method="post">
+                                    <button type="submit" class="btn btn-danger">Delete</button
+                                </form>
                                 </div>
                             </div>
                         </li>

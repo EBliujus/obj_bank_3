@@ -5,7 +5,10 @@ body {
     min-height: 100vh;
     background: linear-gradient(45deg, #65BF92, #2D3F56);
 }
-
+ h1, .client-info,
+.form-text, .form-label, .btn  {
+    color: #fff;
+}
 
 
 @import 'header';

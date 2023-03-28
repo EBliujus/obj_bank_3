@@ -10826,12 +10826,20 @@ body {
   background: linear-gradient(45deg, #65BF92, #2D3F56);
 }
 
+h1, .h1, .client-info,
+.form-text, .form-label, .btn {
+  color: #fff;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
   margin-top: 20px;
+}
+nav ul li {
+  font-weight: bold;
 }
 nav ul li a {
   display: block;
@@ -10859,6 +10867,10 @@ nav ul button {
 }
 nav ul button:hover {
   background-color: #2D3F56;
+  box-shadow: 0 0 10px #65BF92, 0 0 30px #65BF92, 0 0 50px #65BF92;
+}
+
+.card:hover {
   box-shadow: 0 0 10px #65BF92, 0 0 30px #65BF92, 0 0 50px #65BF92;
 }
 

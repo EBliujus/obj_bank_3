@@ -17,7 +17,7 @@
                             <input type="text" class="form-control" name="surname" value="<?=$client['surname']?>">
                             <div class="form-text">PLease add clients Surname here</div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button style="color:#fff "type="submit" class="btn btn-primary">Edit</button>
                     </form>
                 </div>
             </div>

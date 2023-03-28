@@ -1,3 +1,8 @@
+.card:hover {
+    box-shadow: 0 0 10px #65BF92,
+                0 0 30px #65BF92,
+                0 0 50px #65BF92;
+}
 .card-header {
     background: linear-gradient(225deg, #65BF92, #2D3F56);
 }
