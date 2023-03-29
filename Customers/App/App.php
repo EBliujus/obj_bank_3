@@ -3,6 +3,7 @@ namespace App;
 
 use App\Controlers\HomeControler;
 use App\Controlers\ClientControler;
+use App\Controlers\LoginControler;
 
 class App {
 
@@ -60,6 +61,15 @@ class App {
         {
             return (new ClientControler)->delete($url[2]);
         }
+
+        if ($method == 'GET' && count($url) == 1 && $url[0] === 'login') 
+        {
+            return (new LoginControler)->show();
+        }
+
+        if ($method == 'POST' && count($url) == 1 && $url[0] === 'login') 
+        {
+            return (new LoginControler)->login();
         
         else {
             return '<h1>404 Page Not Found</h1>';
