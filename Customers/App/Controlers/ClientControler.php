@@ -52,7 +52,6 @@ class ClientControler {
     }
     public function update($id)
     {
-        
         $data = [];
         $data['name'] = $_POST['name'];
         $data['surname'] = $_POST['surname'];

@@ -31,7 +31,7 @@ class Json implements DataBase {
     function update(int $clientId, array $clientData) : void
     {
         $clientData['id'] = $clientId;
-        $this->data = array_map(fn($d) => $d['id'] == $clientId ? $clientData : $d);
+        $this->data = array_map(fn($d) => $d['id'] == $clientId ? $clientData : $d, $this->data);
     }
 
     function delete(int $clientId) : void
