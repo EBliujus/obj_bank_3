@@ -2,8 +2,19 @@
 namespace App\Controlers;
 use App\App;
 use App\DB\Json;
+use App\Services\Auth;
+use App\Services\Messages;
 
 class ClientControler {
+
+    public function __construct()
+    {
+        if (!Auth::get()->isAuth()) {
+            App::redirect('login');
+            die;
+        }
+    }
+
 
     public function index()
     {
@@ -29,6 +40,7 @@ class ClientControler {
         $data['name'] = $_POST['name'];
         $data['surname'] = $_POST['surname'];
         // $data['tt'] = isset($_POST['tt']) ? 1 : 0; checkBox jei butu pasetintas ar nepasetintas
+        Messages::msg()->addMessage('New client was created', 'success');
         (new Json)-> create($data);
         return App::redirect('clients');
     }
@@ -55,12 +67,15 @@ class ClientControler {
         $data = [];
         $data['name'] = $_POST['name'];
         $data['surname'] = $_POST['surname'];
-        (new Json)-> update($id, $data);
+        // istryniau $id is update salia data
+        (new Json)-> update($data); 
+        Messages::msg()->addMessage('New client was edited', 'warning');
         return App::redirect('clients');
     }
     public function delete($id)
     {
         (new Json)-> delete($id);
+        Messages::msg()->addMessage('The client gone', 'warning');
         return App::redirect('clients');
     }
 }

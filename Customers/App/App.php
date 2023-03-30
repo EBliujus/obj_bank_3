@@ -22,54 +22,50 @@ class App {
     {
         $method = $_SERVER['REQUEST_METHOD'];
 
-        if ($method == 'GET' && count($url) == 1 && $url[0] === '') 
-        {
-            return (new HomeControler)->home();
-        } 
-
-        if ($method == 'GET' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') 
-        {
-            return (new ClientControler)->create();
-        }
-
-        if ($method == 'POST' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') 
-        {
-            return (new ClientControler)->store();
-        }
-
-        if ($method == 'GET' && count($url) == 1 && $url[0] === 'clients') 
-        {
-            return (new ClientControler)->index();
-        }
-
-        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'show') 
-        {
-            return (new ClientControler)->show($url[2]);
-        }
-
-        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'edit') 
-        {
-            return (new ClientControler)->edit($url[2]);
-        }
-        
-        if ($method == 'POST' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'edit') 
-        {
-            return (new ClientControler)->update($url[2]);
-        }
-
-        if ($method == 'POST' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'delete') 
-        {
-            return (new ClientControler)->delete($url[2]);
-        }
-
-        if ($method == 'GET' && count($url) == 1 && $url[0] === 'login') 
-        {
+        if ($method == 'GET' && count($url) == 1 && $url[0] === 'login') {
             return (new LoginControler)->show();
         }
 
-        if ($method == 'POST' && count($url) == 1 && $url[0] === 'login') 
-        {
+        if ($method == 'POST' && count($url) == 1 && $url[0] === 'login') {
             return (new LoginControler)->login();
+        }
+
+        if ($method == 'POST' && count($url) == 1 && $url[0] === 'logout') {
+            return (new LoginControler)->logout();
+        }
+        
+        if ($method == 'GET' && count($url) == 1 && $url[0] === '') {
+            return (new HomeControler)->home();
+        } 
+
+
+
+        if ($method == 'GET' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') {
+            return (new ClientControler)->create();
+        }
+
+        if ($method == 'POST' && count($url) == 2 && $url[0] === 'clients' && $url[1] === 'create') {
+            return (new ClientControler)->store();
+        }
+
+        if ($method == 'GET' && count($url) == 1 && $url[0] === 'clients') {
+            return (new ClientControler)->index();
+        }
+
+        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'show') {
+            return (new ClientControler)->show($url[2]);
+        }
+
+        if ($method == 'GET' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'edit') {
+            return (new ClientControler)->edit($url[2]);
+        }
+        
+        if ($method == 'POST' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'edit') {
+            return (new ClientControler)->update($url[2]);
+        }
+
+        if ($method == 'POST' && count($url) == 3 && $url[0] === 'clients' && $url[1] === 'delete') {
+            return (new ClientControler)->delete($url[2]);
         }
         else {
             return '<h1>404 Page Not Found</h1>';
