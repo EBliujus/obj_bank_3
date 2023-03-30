@@ -7,7 +7,7 @@
                         <h1>Login</h1>
                     </div>
                     <div class="card-body">
-                        <form action="<?= URL ?>login" method="POST">
+                        <form action="<?= URL ?>login" method="post">
                             <div class="mb-3">
                                 <label class="form-label">User Name</label>
                                 <input type="text" class="form-control" name="name">

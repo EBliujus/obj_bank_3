@@ -10,8 +10,10 @@ use App\Services\Auth;
             <li><a class="active" href="#">Contact</a></li>
             <li><a class="active" href="#">Feedback</a></li>
             <?php if (Auth::get()->isAuth()) : ?>
-                <a><?php Auth::get()->getName() ?></a>
-                <a href="<?= URL ?>logout"><button>LogOut</button></a>
+                <span><?php Auth::get()->getName() ?></span>
+                <form class="logout" action="<?= URL ?>logout" method="post">
+                    <button type="submit">LogOut</button>
+                </form>
             <?php else : ?>
                 <a href="<?= URL ?>login"><button>Login</button></a>
             <?php endif ?>
