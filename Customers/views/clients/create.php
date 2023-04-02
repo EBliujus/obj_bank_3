@@ -15,14 +15,6 @@
                             <label class="form-label">Client Surname</label>
                             <input type="text" class="form-control" name="surname">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Personal ID</label>
-                            <input type="text" class="form-control" name="personalId" require>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Account Number</label>
-                            <input type="text" class="form-control" name="iban" require>
-                        </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>

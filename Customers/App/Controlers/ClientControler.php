@@ -67,8 +67,10 @@ class ClientControler {
         $data = [];
         $data['name'] = $_POST['name'];
         $data['surname'] = $_POST['surname'];
+        $data['personalId'] = $_POST['personalId'];
+        $data['iban'] = $_POST['iban'];
         // istryniau $id is update salia data
-        (new Json)-> update($data); 
+        (new Json)-> update($id, $data); 
         Messages::msg()->addMessage('New client was edited', 'warning');
         return App::redirect('clients');
     }

@@ -3,15 +3,24 @@
                 0 0 30px #65BF92,
                 0 0 50px #65BF92;
 }
+
 .card-header {
     background: linear-gradient(225deg, #65BF92, #2D3F56);
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
-.card-body{
+
+.card-body {
     background: linear-gradient(225deg, #65BF92, #2D3F56);
 }
+
 .list-group-item {
     background: linear-gradient(225deg, #65BF92, #2D3F56);
 }
+
 .client-line {
     display: flex;
     width: 100%;
@@ -21,10 +30,17 @@
         display: flex;
         justify-content: space-around;
     }
-    .buttons {
-        display: flex;
-        justify-content: flex-end;
-        gap: 15px;
+    .myg-container {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
         color: #2D3F56;
     }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
