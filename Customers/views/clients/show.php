@@ -8,8 +8,12 @@
                 <div class="card-body">
                     <div class="client-line">
                         <div class="client-info">
-                            <?=  $client['name']?>
-                            <?=  $client['surname']?>
+                            <?= $client['id']?>
+                            <?= $client['name']?>
+                            <?= $client['surname']?>
+                            <?= $client['personalId'] ?>
+                            <?= $client['iban'] ?>
+                            <?= $client['balance'] ?>
                         </div>
                     </div>
                 </div>

@@ -11,8 +11,12 @@
                         <li class="list-group-item">
                             <div class="client-line">
                                 <div class="client-info">
-                                    <?=  $client['name']?>
-                                    <?=  $client['surname']?>
+                                    <?= $client['id']?>
+                                    <?= $client['name']?>
+                                    <?= $client['surname']?>
+                                    <?= $client['personalId'] ?>
+                                    <?= $client['iban'] ?>
+                                    <?= $client['balance'] ?>
                                 </div>
                                 <div class="buttons">
                                 <a href="<?= URL ?>clients/show/<?= $client['id'] ?>" class="btn btn-info">Show</a>

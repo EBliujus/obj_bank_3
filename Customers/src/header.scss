@@ -5,6 +5,12 @@ nav {
       align-items: center;
       list-style-type: none;
       margin-top: 20px;
+      span {
+        color: crimson;
+        font-weight: bold;
+        letter-spacing: 5px;
+        padding-left: 20px;
+    }
       li {
         font-weight: bold;
         a {

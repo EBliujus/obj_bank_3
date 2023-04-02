@@ -7,8 +7,6 @@ use App\Services\Auth;
             <li><a class="active" href="<?= URL ?>">Home</a></li>
             <li><a class="active" href="<?= URL ?>clients/create">Create Account</a></li>
             <li><a class="active" href="<?= URL ?>clients">Clients List</a></li>
-            <li><a class="active" href="#">Contact</a></li>
-            <li><a class="active" href="#">Feedback</a></li>
             <?php if (Auth::get()->isAuth()) : ?>
                 <span><?php Auth::get()->getName() ?></span>
                 <form class="logout" action="<?= URL ?>logout" method="post">

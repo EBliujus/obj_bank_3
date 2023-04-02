@@ -25,6 +25,12 @@ class Json implements DataBase {
     {
         $id = rand(1000000, 99999999);
         $clientData['id'] = $id;
+        $iban = 'LT' . rand(10, 99) . 10100 . rand(10000000000, 99999999999);
+        $clientData['iban'] = $iban;
+        $personalId = rand(3,6) . substr(rand(1923, 2023), -2) . str_pad(rand(1, 12), 2, 0, STR_PAD_LEFT) . str_pad(rand(1, 31), 2, 0, STR_PAD_LEFT) . str_pad(rand(1, 999), 3, 0, STR_PAD_LEFT) . rand(1, 9);
+        $clientData['personalId'] = $personalId;
+        $balance = 0;
+        $clientData['balance'] = $balance;
         $this->data[] = $clientData;
     }
 
@@ -50,5 +56,7 @@ class Json implements DataBase {
     {
         return $this->data;
     }
+
+    
 
 }
