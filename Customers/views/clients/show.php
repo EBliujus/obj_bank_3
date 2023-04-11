@@ -5,7 +5,7 @@
       <th scope="col">Name</th>
       <th scope="col">Surname</th>
       <th scope="col">Personal ID</th>
-      <th scope="col">Sąskaitos Nr.</th>
+      <th scope="col">Account Nr.</th>
       <th scope="col">Balance</th>
     </tr>
   </thead>
